@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2>Let’s Connect</h2>
+        <p class="contact-intro">
+          Have a project in mind, a role you’re hiring for, or just want to say
+          hi?<br />
+          I’d love to hear from you.
+        </p>
+
+        <form
+          action="https://formspree.io/f/YOUR_ID"
+          method="POST"
+          class="contact-form"
+        >
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="_replyto" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+
+        <div class="contact-details">
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:chelsea@example.com">chelsea@example.com</a>
+          </p>
+          <p>
+            <strong>LinkedIn:</strong>
+            <a href="https://linkedin.com/in/chelseawatson" target="_blank"
+              >linkedin.com/in/chelseawatson</a
+            >
+          </p>
+          <p>
+            <strong>GitHub:</strong>
+            <a href="https://github.com/chelsea-dev" target="_blank"
+              >github.com/chelsea-dev</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
