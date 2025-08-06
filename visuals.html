@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visual Storytelling</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .hero h2 {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 12.9375rem;
+        font-weight: 800;
+        color: #e45533;
+        margin: 0;
+        letter-spacing: -0.07em;
+        line-height: 1;
+        text-align: center;
+      }
+
+      .gallery {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        padding: 4rem 2rem;
+      }
+
+      .gallery img {
+        width: 100%;
+
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+      }
+
+      .gallery img:hover {
+        transform: scale(1.03);
+      }
+
+      .gallery-caption {
+        text-align: center;
+        font-weight: 600;
+        margin-top: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container header-container">
+        <div class="logo">Codementum<span class="logo-tag"> {CM}</span></div>
+
+        <nav class="nav-center">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <a
+          href="/assets/ChelseaWatson_Resume.pdf"
+          download="ChelseaWatson_Resume.pdf"
+          class="btn"
+          >Download</a
+        >
+      </div>
+    </header>
+
+    <section class="hero">
+      <h2>Visual Work</h2>
+    </section>
+
+    <main class="gallery">
+      <div>
+        <img src="assets/Burton_ copy.png" />
+        <p class="gallery-caption">Burton Promo Poster</p>
+      </div>
+      <div>
+        <img src="assets/GloopyAshtray10mb copy.png" />
+        <p class="gallery-caption">Houseplant Ad</p>
+      </div>
+      <div>
+        <img src="assets/Houseplant_Poster copy.png" />
+        <p class="gallery-caption">Typographic Poster</p>
+      </div>
+      <div>
+        <img src="assets/LEON copy.png" />
+        <p class="gallery-caption">Movie Tribute Poster</p>
+      </div>
+      <div>
+        <img src="assets/spikelee.png" />
+        <p class="gallery-caption">Nike Poster</p>
+      </div>
+      <div>
+        <img src="assets/Arbor copy.png" />
+        <p class="gallery-caption">Arbor Snowboards Ad</p>
+      </div>
+      <div>
+        <img src="assets/MM copy.png" />
+        <p class="gallery-caption">Modest Mouse Poster</p>
+      </div>
+      <!-- Add more as needed -->
+    </main>
+  </body>
+</html>
