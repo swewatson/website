@@ -120,8 +120,10 @@ h1 span {
   text-align: center;
   transition: background-color 0.3s, color 0.3s;
   cursor: pointer;
+  color: #e45533;
 }
 
+.card:hover,
 .card.active {
   background-color: #e45533;
   color: #fff;
