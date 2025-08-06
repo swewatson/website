@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #fdf9ef;
@@ -5,93 +11,65 @@ body {
   line-height: 1.6;
 }
 
+/* Header + Nav */
 header {
-  border-bottom: 3px solid #e4512c;
-  background-color: #fefcf5;
-  padding: 1rem 2rem;
+  background-color: #fdf9ef;
+  border-bottom: 2px solid #e45533;
 }
 
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+header .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  font-size: 1.75rem;
-  font-weight: 800;
-  color: #e4512c;
-}
-
-.logo .tag {
-  font-size: 0.85rem;
+  font-size: 1.8rem;
   font-weight: 700;
-  color: #e28b6d;
-  margin-left: 0.35rem;
-  vertical-align: top;
+  color: #e45533;
+  flex: 1;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-}
-
-.nav-links a {
-  text-decoration: none;
-  font-weight: 700;
-  color: #e4512c;
-  transition: opacity 0.2s ease;
-}
-
-.nav-links a:hover {
+.logo-tag {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #e45533;
+  margin-left: 0.25rem;
+  vertical-align: middle;
   opacity: 0.7;
+}
+
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-center a {
+  text-decoration: none;
+  color: #e45533;
+  font-weight: 500;
+  font-size: 1rem;
 }
 
 .download-btn {
-  background-color: #e4512c;
+  background-color: #e45533;
   color: #fff;
-  padding: 0.75rem 1.5rem;
-  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
   text-decoration: none;
-  border-radius: 10px;
-  font-size: 1.125rem;
+  font-weight: bold;
+  font-size: 1rem;
+  white-space: nowrap;
 }
 
-.logo {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #e45533;
-}
-
-.logo-tag {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #e45533;
-  margin-left: 0.25rem;
-  vertical-align: middle;
-  opacity: 0.7;
-}
-
-.logo {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #e45533;
-}
-
-.logo-tag {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #e45533;
-  margin-left: 0.25rem;
-  vertical-align: middle;
-  opacity: 0.7;
-}
-
+/* About Section */
 .about-hero {
   display: flex;
   align-items: center;
@@ -102,38 +80,6 @@ header {
 
 .about-content {
   max-width: 1000px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 3rem;
-}
-
-.about-content .text {
-  flex: 1;
-  min-width: 300px;
-}
-
-.about-content h1 {
-  font-size: 4rem;
-  margin: 0;
-  color: #e14f2b;
-}
-
-.about-content h2 {
-  font-size: 1.5rem;
-  margin: 0.5rem 0 1.5rem;
-  color: #e14f2b;
-  font-weight: 600;
-}
-
-.about-content p {
-  line-height: 1.6;
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-}
-
-.about-content {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -155,6 +101,26 @@ header {
   flex: 1;
   min-width: 300px;
   max-width: 600px;
+  padding: 2rem;
+}
+
+.about-content h1 {
+  font-size: 4rem;
+  margin: 0;
+  color: #e14f2b;
+}
+
+.about-content h2 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0 1.5rem;
+  color: #e14f2b;
+  font-weight: 600;
+}
+
+.about-content p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
 }
 
 .contact-button {
@@ -168,6 +134,7 @@ header {
   border-radius: 8px;
 }
 
+/* Social */
 .social-icons {
   margin-top: 1rem;
   display: flex;
@@ -194,14 +161,17 @@ header {
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   header .container {
     flex-direction: column;
     gap: 1rem;
   }
 
-  nav {
-    gap: 1rem;
+  .nav-center {
+    position: static;
+    transform: none;
+    margin-top: 1rem;
   }
 
   h1 {
@@ -209,11 +179,8 @@ header {
     text-align: center;
   }
 
-  .sound-cards {
-    grid-template-columns: 1fr;
-  }
-
-  .info {
-    grid-template-columns: 1fr;
+  .about-content {
+    flex-direction: column;
+    align-items: center;
   }
 }
