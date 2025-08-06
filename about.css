@@ -143,10 +143,12 @@ header {
 }
 
 .about-image img {
-  width: 350px;
-  height: 350px;
-  object-fit: cover;
+  width: 330px;
+  height: 330px;
   border-radius: 50%;
+  object-fit: contain;
+  background-color: #bb8e2c;
+  padding: 0.4px;
 }
 
 .text {
